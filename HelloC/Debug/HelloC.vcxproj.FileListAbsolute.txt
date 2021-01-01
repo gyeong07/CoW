@@ -1,0 +1,2 @@
+D:\0수경\GitHub\CoW\HelloC\Debug\HelloC.exe
+D:\0수경\GitHub\CoW\HelloC\Debug\HelloC.pdb
