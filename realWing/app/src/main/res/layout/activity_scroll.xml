@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_scroll"
+    tools:context=".ScrollActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00DF0A0A"
-            android:text="심폐소생술"
+            android:text="자동심장충격기"
             android:textColor="#000000"
             app:iconTint="#FFFFFF" />
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#00FFFFFF"
-            android:text="자동심장충격기"
+            android:text="심폐소생술"
             android:textColor="#000000" />
     </LinearLayout>
 

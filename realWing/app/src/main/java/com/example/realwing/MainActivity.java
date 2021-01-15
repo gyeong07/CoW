@@ -1,7 +1,6 @@
 package com.example.realwing;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.fab4:
                 anim();
                 Toast.makeText(this, "응급처치", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(this, activity_scroll.class);
+                Intent intent = new Intent(this, ScrollActivity.class);
                 startActivity(intent);
                 break;
         }
