@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(void) {
+int main_UpDown(void) {
 
+	srand(time(NULL));
 	int num = rand() % 100 + 1;
 	int ans = 0;
 	int chance = 5;

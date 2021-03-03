@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main_HiC(void) {
 	int year;
 	printf("지금은 몇년도인가요?\n:");
 	scanf_s("%d", &year);
