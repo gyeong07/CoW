@@ -7,7 +7,7 @@
 int getRandNum(int level);
 void showQ(int level, int num1, int num2);
 
-int main(void) {
+int main_Password(void) {
 
 	srand(time(NULL));
 	int count = 0;
