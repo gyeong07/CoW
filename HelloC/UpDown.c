@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main_UpDown(void) {
+int main(void) {
 
 	srand(time(NULL));
 	int num = rand() % 100 + 1;

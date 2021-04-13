@@ -1,4 +1,4 @@
-﻿  fuction.c
-C:\Users\박수경\Desktop\Git\CoW\HelloC\fuction.c(6,7): warning C4013:  'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\Users\박수경\Desktop\Git\CoW\HelloC\fuction.c(9,22): warning C4013:  'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-  HelloC.vcxproj -> C:\Users\박수경\Desktop\Git\CoW\HelloC\Debug\HelloC.exe
+﻿  pointer.c
+D:\0수경\GitHub\CoW\HelloC\pointer.c(9,6): warning C4013: 'swap'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+D:\0수경\GitHub\CoW\HelloC\pointer.c(20): warning C4716: 'swap': 값을 반환해야 합니다.
+  HelloC.vcxproj -> D:\0수경\GitHub\CoW\HelloC\Debug\HelloC.exe
