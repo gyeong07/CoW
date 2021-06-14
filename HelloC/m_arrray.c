@@ -1,47 +1,34 @@
 #include <stdio.h>
+#include <time.h>
+//10마리의 서로 다른 동물 (각 카드 2장씩)
+//사용자로부터 2개의 입력값을 받아서 -> 같은 동물 찾으면 카드 뒤집기
+//모든 동물 쌍을 찾으면 게임 종료
+//총 실패 횟수 알려주기
+
+int arrayAnimal[4][5]; //20장의 카드 지도
+int initAnimalName();
+
+void initAnimalArray();
 
 int main() {
 
-	int arr[5] = { 1,2,3,4,5 };
-	int arr2[2][5] = 
-	{ 
-		{1,2,3,4,5},
-		{1,2,3,4,5} 
-	};
-	int arr3[3][4][4] = 
-	{ 
-		{
-			{01,02,03,04},
-			{11,12,13,14},
-			{21,22,23,24},
-			{31,32,33,34}
-		},
+	srand(time(NULL));
 
-		{
-			{41,42,43,44},
-			{51,52,53,54},
-			{61,62,63,64},
-			{71,72,73,74}
-		},
+	initAnimalArray();
+	initAnimalName();
 
-		{
-			{81,82,83,84},
-			{91,92,93,94},
-			{101,102,103,104},
-			{111,112,113,114}
-		},
-
-	};
-
-	//배열 값을 for문으로 출력
-	for (int i = 0; i < 3; i++) {
-		for (int j = 0; j < 4; j++) {
-			for (int k = 0; k < 4; k++) {
-				printf("(%d, %d, %d): %d ||", i, j, k, arr3[i][j][k]);
-			}
-			printf("\n");
-		}
-		printf("\n");
-	}
 	return 0;
+}
+
+void initAnimalArray() {
+
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 5; j++) {
+			arrayAnimal[i][j] = -1;
+		}
+	}
+}
+
+int initAnimalName() {
+
 }
