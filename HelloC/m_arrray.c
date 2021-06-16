@@ -6,9 +6,13 @@
 //총 실패 횟수 알려주기
 
 int arrayAnimal[4][5]; //20장의 카드 지도
-int initAnimalName();
+char* strAnimal[10];
 
 void initAnimalArray();
+void initAnimalName();
+void shuffleAnimal();
+int conv_pos_x(int x);
+int conv_pos_y(int y);
 
 int main() {
 
@@ -16,6 +20,8 @@ int main() {
 
 	initAnimalArray();
 	initAnimalName();
+
+	shuffleAnimal();
 
 	return 0;
 }
@@ -29,6 +35,56 @@ void initAnimalArray() {
 	}
 }
 
-int initAnimalName() {
+void initAnimalName() {
+	strAnimal[0] = "토끼";
+	strAnimal[1] = "하마";
+	strAnimal[2] = "강아지";
+	strAnimal[3] = "고양이";
+	strAnimal[4] = "돼지";
 
+	strAnimal[5] = "닭";
+	strAnimal[6] = "용";
+	strAnimal[7] = "호랑이";
+	strAnimal[8] = "도롱뇽";
+	strAnimal[9] = "나무늘보";
+}
+
+void shuffleAnimal() {
+
+	//□□□□□
+	//□□□□□
+	//□□□□□
+	//□□□□□
+
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 2; j++) {
+			int pos = getEmptyPosition();
+			int x = conv_pos_x(pos);
+			int y = conv_pos_y(pos);
+
+			arrayAnimal[x][y] = i;
+		}
+	}
+}
+
+//좌표에서 빈 공간 찾기
+int getEmptyPosition() {
+	while (1) {
+		int randPos = rand() % 20;
+		int x = conv_pos_x(randPos);
+		int y = conv_pos_y(randPos);
+
+		if (arrayAnimal[x][y] == -1) {
+			return randPos;
+		}
+	}
+	return 0;
+}
+
+int conv_pos_x(int x) {
+	return x / 5;
+}
+
+int conv_pos_y(int y) {
+	return y % 5;
 }
