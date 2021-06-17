@@ -6,6 +6,7 @@
 //총 실패 횟수 알려주기
 
 int arrayAnimal[4][5]; //20장의 카드 지도
+int checkAnimal[4][5];
 char* strAnimal[10];
 
 void initAnimalArray();
@@ -13,6 +14,9 @@ void initAnimalName();
 void shuffleAnimal();
 int conv_pos_x(int x);
 int conv_pos_y(int y);
+void printAnimals();
+void printQuestion();
+
 
 int main() {
 
@@ -22,6 +26,21 @@ int main() {
 	initAnimalName();
 
 	shuffleAnimal();
+
+	int failCount = 0;
+
+	while (1) {
+		int select1 = 0;
+		int select2 = 0;
+
+		printAnimals();
+		printQuestion();
+		printf("뒤집을 카드를 2개 고르세요:  ");
+		scanf_s("%d %d", &select1, &select2);
+
+		if (select1 == select2)
+			continue;
+	}
 
 	return 0;
 }
@@ -87,4 +106,33 @@ int conv_pos_x(int x) {
 
 int conv_pos_y(int y) {
 	return y % 5;
+}
+
+void printAnimals() {
+	printf("\n==========비==========★=========밀========\n\n");
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 5; j++) {
+			printf("%8s", strAnimal[arrayAnimal[j][i]);
+		}
+		printf("\n");
+	}
+	printf("\n===========================================\n\n");
+}
+
+void printQuestion() {
+	printf("\n\n(문제)\n");
+	int seq = 0;
+
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 5; j++) {
+			//카드를 뒤집어서 정답을 맞혔으면 동물 이름
+			if (checkAnimal[i][j] != 0) {
+				printf("%8s", strAnimal[arrayAnimal[i][j]);
+			}
+			//아직 뒤집지 못했으면(or 정답 X) 위치 숫자
+			else {
+
+			}
+		}
+	}
 }
